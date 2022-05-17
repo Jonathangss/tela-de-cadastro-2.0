@@ -4,20 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Cadastro</title>
 </head>
 <body>
     <div class=container> 
         <section class="content content1" >
             <div class=column1>
-                <h2 class=title> Olá!</h2> 
-                <p class=description> Bem-vindo de Volta!</p>
-                <p class=description>Insira seus dados corretamente</p>
+                <h2 class=title> Bem-vindo de Volta!</h2> 
+                <p class=description>Insira seus dados para acessar</p>
                 <button class=button>Entrar</button>
             </div>
         
             <div class=column2>
                 <h2 class=title> Crie sua conta</h2>
+                <p class=description> Estamos felizes por você estar se juntando a nós!</p>
+                <div class=social-media>
+                    <ul class="lista-sm">
+                        <li> <a href="#">Google</a></li>
+                        <li> <a href="#">Linkedin</a></li> 
+                        <li> <a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+                <p class="descriptiom">Crie sua conta através de suas redes sociais.</p>
+                <form>
+                    <input type=text placeholder="Nome Completo">
+                    <input type=email placeholder="E-mail">
+                    <input type=password placeholder="Senha">
+                    <input type=password placeholder="Confirmar senha">
+                    <button class="button-cadastro">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+        <section class="content content2">
+            <div class=column1>
+                <h2 class=title> Olá!</h2> 
+                <p class=description>Informe seus dados corretamente</p>
+                <button class=button>Cadastrar</button>
+            </div>
+        
+            <div class=column2>
+                <h2 class=title>Acesse seu portal</h2>
                 <p class=description> Estamos felizes por você estar se juntando a nós!</p>
                 <div class=social-media>
                     <ul>
@@ -26,15 +53,15 @@
                         <li> <a href="#">Facebook</a></li>
                     </ul>
                 </div>
+                <p class="descriptiom">Acesse sua conta através de suas redes sociais.</p>
                 <form>
-                    <input type=text placeholder="Nome Completo">
                     <input type=email placeholder="E-mail">
                     <input type=password placeholder="Senha">
-                    <input type=password placeholder="Confirmar senha">
+                    <a href="#">Recuperar Senha</a> 
+                    <button class="button-cadastro">Entrar</button>
                 </form>
             </div>
         </section>
-        <section class="content content2"></section>
     </div>
 </body>
 </html>

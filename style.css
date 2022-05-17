@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100%;
+}
+.content1{
+    display: flex;
+}
+.content2{
+    
+    display: none;
+    position:absolute;
+}
+.column2{
+    margin-left: 10vh;
+}
+.lista-sm{
+    display: flex;
+}
+form{
+ display: flex;
+ flex-direction: column;
+}
