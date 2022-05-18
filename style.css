@@ -11,17 +11,33 @@ body{
     justify-content: center;
     align-items:center;
     height: 100%;
+    background: linear-gradient(360deg, #547466 0%, #82a998 100%);
+
+}
+.content{
+background-color: #fff;
+border-radius: 20px;
+width: 90%;
+height: 60%;
+display: flex;
+justify-content:space-around;
+align-items: center;
 }
 .content1{
     display: flex;
+ 
 }
 .content2{
     
     display: none;
     position:absolute;
 }
+.column1{
+    text-align: center;
+    flex:1 0 auto;
+}
 .column2{
-    margin-left: 10vh;
+    flex:2 0 auto;
 }
 .lista-sm{
     display: flex;
