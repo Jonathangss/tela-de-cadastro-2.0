@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --font-size:62.5%;/* 1 rem = 10px */
+}
 body{
     font-family: 'Montserrat Alternates',sans-serif;
     height: 100vh;
@@ -19,21 +23,21 @@ body{
 .content{
     position: relative;
     background-color: #fff;
-    border-radius: 20px;
-    width: 90%;
-    height: 60%;
+    border-radius: 2rem;
+    width: 90rem;
+    height: 50rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
 }
 .content::before{
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
     content: "";
    position: absolute;
     background-color: #3b6754;
-    width: 40%;
-    height: 100%;
+    width: 35rem;
+    height: 50rem;
 }
 .content1{
     display: flex;
@@ -49,6 +53,10 @@ body{
     z-index: 50;
     text-align: center;
     flex:1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .column2{
     text-align: center;
@@ -62,6 +70,31 @@ form{
  flex-direction: column;
 }
 .title{
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 600;
+}
+.description{
+    line-height: 3rem; /* espaço entre linhas */
+}
+.button{
+    border-radius: 3rem;
+    width: 12rem;
+    height: 3.4rem;
+    font-weight:600;
+    font-size: 2rem;
+    color: #fff;
+    
+}
+.button-entrar{
+    background-color: transparent;
+    box-shadow: 0.1rem 0.3rem  1rem #245239;
+    border: 0.2rem solid #326749;
+    
+}
+.button-entrar:hover{
+    background-color: #fff;
+    color: #245239;
+    box-shadow: 0rem 0.1rem  0.5rem #82a998;
+    border: 0.2rem solid #ffffff;
+    transition: 0.4s;
 }
