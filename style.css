@@ -61,6 +61,9 @@ body{
 .column2{
     text-align: center;
     flex:2 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .lista-sm{
     display: flex;
@@ -82,10 +85,11 @@ form{
     height: 3.4rem;
     font-weight:600;
     font-size: 2rem;
-    color: #fff;
+    
     
 }
 .button-entrar{
+    color: #fff;
     background-color: transparent;
     box-shadow: 0.1rem 0.3rem  1rem #245239;
     border: 0.2rem solid #326749;
@@ -96,5 +100,19 @@ form{
     color: #245239;
     box-shadow: 0rem 0.1rem  0.5rem #82a998;
     border: 0.2rem solid #ffffff;
+    transition: 0.4s;
+}
+.button-cadastro{
+    color: #245239;
+    background-color: transparent;
+    box-shadow: 0.1rem 0.3rem  1rem #696969;
+    border: 0.2rem solid #f5f5f5;
+    
+}
+.button-cadastro:hover{
+    background-color: #245239;
+    color: #fff;
+    box-shadow: 0rem 0.1rem  0.5rem #668879;
+    border: 0.2rem solid #245239;
     transition: 0.4s;
 }
