@@ -59,34 +59,101 @@ body{
     align-items: center;
 }
 .column2{
+    color: #adadad;
     text-align: center;
     flex:2 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.lista-sm{
+/* .social-media{
+    width: 6rem;
     display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+} */
+.lista-sm{
+    width: 15rem;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-form{
+.item-sm{
+    border: 0.1rem solid #dddddd;
+    border-radius: 3rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    color: #245239;
+    background-color: transparent;
+    box-shadow: 0.1rem 0.3rem  1rem #696969;
+    border: 0.2rem solid #f5f5f5;
+    
+}
+.item-sm:hover{
+    background-color: #245239;
+    color: #fff;
+    box-shadow: 0rem 0.1rem  0.5rem #668879;
+    border: 0.2rem solid #245239;
+    transition: 0.4s;
+}
+.item-sm a{
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: #245239;
+}
+.item-sm a:hover{
+    margin: 80px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.input-cadastro{
  display: flex;
  flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.input-cadastro input{
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-family:'Montserrat Alternates',sans-serif;
+    font-weight: 500;
+    width: 25rem;
+    height: 4rem;
+    border: none;
+    background-color:#eefaf6;
+    margin:0.6rem; 
+}
+input::placeholder{
+    color: rgb(169, 169, 169);
+    font-size: 1.1rem;
+    font-family:'Montserrat Alternates',sans-serif;
+    font-weight: 500;
+}
+#senha{
+    font-size: 1.7rem;
 }
 .title{
     font-size: 2rem;
     font-weight: 600;
 }
+.title-criar{
+    color: #245239;
+}
 .description{
+    font-size: 1.1rem;
     line-height: 3rem; /* espaço entre linhas */
 }
 .button{
     border-radius: 3rem;
-    width: 12rem;
+    width: 11rem;
     height: 3.4rem;
     font-weight:600;
     font-size: 2rem;
-    
-    
 }
 .button-entrar{
     color: #fff;
@@ -103,6 +170,7 @@ form{
     transition: 0.4s;
 }
 .button-cadastro{
+    margin:1rem;
     color: #245239;
     background-color: transparent;
     box-shadow: 0.1rem 0.3rem  1rem #696969;
