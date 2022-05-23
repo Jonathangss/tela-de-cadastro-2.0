@@ -41,7 +41,8 @@ body{
 }
 .content1{
     display: flex;
- 
+    /* align-items: center;
+    justify-content: start; */
 }
 .content2{
     
@@ -59,11 +60,12 @@ body{
     align-items: center;
 }
 .column2{
+    margin-left: 10rem;
     color: #adadad;
     text-align: center;
     flex:2 0 auto;
     display: flex;
-    align-items: center;
+    align-items:center;
     flex-direction: column;
 }
 /* .social-media{
@@ -122,14 +124,16 @@ body{
     font-size: 1.1rem;
     font-family:'Montserrat Alternates',sans-serif;
     font-weight: 500;
+    background: linear-gradient(180deg, #e8fff7 0%, #b3dfcb 100%);
     width: 25rem;
     height: 4rem;
+    border-radius: 5rem;
     border: none;
     background-color:#eefaf6;
-    margin:0.6rem; 
+    margin:0.6rem;
 }
 input::placeholder{
-    color: rgb(169, 169, 169);
+    color: rgb(185, 184, 184);
     font-size: 1.1rem;
     font-family:'Montserrat Alternates',sans-serif;
     font-weight: 500;
@@ -149,6 +153,7 @@ input::placeholder{
     line-height: 3rem; /* espaço entre linhas */
 }
 .button{
+    cursor: pointer;
     border-radius: 3rem;
     width: 11rem;
     height: 3.4rem;
