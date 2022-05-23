@@ -129,8 +129,8 @@ body{
     height: 4rem;
     border-radius: 5rem;
     border: none;
-    background-color:#eefaf6;
-    margin:0.6rem;
+    background-color:#eefaf6; 
+   
 }
 input::placeholder{
     color: rgb(185, 184, 184);
@@ -188,4 +188,11 @@ input::placeholder{
     box-shadow: 0rem 0.1rem  0.5rem #668879;
     border: 0.2rem solid #245239;
     transition: 0.4s;
+}
+.label-input{
+    background: linear-gradient(180deg, #e8fff7 0%, #b3dfcb 100%);
+    border-radius: 5rem;
+    padding: 0.8rem;
+    margin:0.5rem;
+    
 }
