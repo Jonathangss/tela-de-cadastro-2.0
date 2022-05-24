@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
 
 :root{
     --font-size:62.5%;/* 1 rem = 10px */
@@ -44,22 +49,21 @@ body{
     /* align-items: center;
     justify-content: start; */
 }
-.content2{
-    
-    display: none;
-    position:absolute;
-}
 .column1{
     color: #fff;
-    z-index: 50;
+    z-index: 1;
     text-align: center;
-    flex:1 0 auto;
+    flex:2 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.content1 .column2{
+    z-index: 2; /* sobrepondo a coluna 2 do primeiro conteudo */
+}
 .column2{
+    
     margin-left: 10rem;
     color: #adadad;
     text-align: center;
@@ -80,6 +84,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin:1.3rem;
+}
+.link-sm{
+    text-decoration: none;
+    width: 4rem;
 }
 .item-sm{
     border: 0.1rem solid #dddddd;
@@ -93,24 +102,28 @@ body{
     background-color: transparent;
     box-shadow: 0.1rem 0.3rem  1rem #696969;
     border: 0.2rem solid #f5f5f5;
-    
 }
 .item-sm:hover{
     background-color: #245239;
     color: #fff;
     box-shadow: 0rem 0.1rem  0.5rem #668879;
     border: 0.2rem solid #245239;
-    transition: 0.4s;
+    transition: 0.5s;
+    font-size: 2.3rem;
 }
-.item-sm a{
+/* .item-sm a{
     padding: 0.5rem;
-    font-size: 2rem;
+    font-size:2rem;
     color: #245239;
+    text-decoration: none;
+
+} */
+.link-icon{
+    text-decoration: none;
 }
-.item-sm a:hover{
-    margin: 80px;
-    font-size: 2rem;
-    color: #ffffff;
+.link-icon li{
+    align-items: center;
+    font-size:1.8rem; 
 }
 
 .input-cadastro{
@@ -119,24 +132,37 @@ body{
  justify-content: center;
  align-items: center;
 }
+
+.label-input{
+    width: 100%;
+    background: linear-gradient(180deg, #e8fff7 0%, #b3dfcb 100%);
+    border-radius: 5rem;
+    padding: 0.8rem;
+    margin:0.5rem;
+    display: flex;
+    align-items: center;
+    margin: 0.8rem;
+}
 .input-cadastro input{
     padding: 0.9rem;
     font-size: 1.1rem;
     font-family:'Montserrat Alternates',sans-serif;
     font-weight: 500;
-    background: linear-gradient(180deg, #e8fff7 0%, #b3dfcb 100%);
-    width: 25rem;
-    height: 4rem;
-    border-radius: 5rem;
-    border: none;
-    background-color:#eefaf6; 
-   
+    background: transparent;
+    height: 3rem;
+    width: 100%;
+    border: none;  
 }
+
 input::placeholder{
     color: rgb(185, 184, 184);
     font-size: 1.1rem;
     font-family:'Montserrat Alternates',sans-serif;
     font-weight: 500;
+}
+.icon-cadastro{
+    border: none;
+    padding: 0 0.5rem;
 }
 #senha{
     font-size: 1.7rem;
@@ -172,7 +198,7 @@ input::placeholder{
     color: #245239;
     box-shadow: 0rem 0.1rem  0.5rem #82a998;
     border: 0.2rem solid #ffffff;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 .button-cadastro{
     margin:1rem;
@@ -189,10 +215,94 @@ input::placeholder{
     border: 0.2rem solid #245239;
     transition: 0.4s;
 }
-.label-input{
-    background: linear-gradient(180deg, #e8fff7 0%, #b3dfcb 100%);
-    border-radius: 5rem;
-    padding: 0.8rem;
-    margin:0.5rem;
+
+/*Content2*/
+.content2{
+    position: absolute;
+    display: flex;
+}
+.content2 .column1{
+    order:2;
+    z-index: -2;
+}
+.content2 .column2{
+    order:1;
+    z-index: -2;
+}
+.input-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-login input{
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-family:'Montserrat Alternates',sans-serif;
+    font-weight: 500;
+    background: transparent;
+    height: 3rem;
+    width: 100%;
+    border: none;  
+}
+.button-login{
+    margin:1rem;
+    color: #245239;
+    background-color: transparent;
+    box-shadow: 0.1rem 0.3rem  1rem #696969;
+    border: 0.2rem solid #f5f5f5;
     
+}
+.button-login:hover{
+    background-color: #245239;
+    color: #fff;
+    box-shadow: 0rem 0.1rem  0.5rem #668879;
+    border: 0.2rem solid #245239;
+    transition: 0.4s;
+}
+.title-acess{
+    color: #245239;
+}
+/* Chamada do JS */
+.acesso-js .content1 .column1,
+.acesso-js .content1 .column2{
+    z-index: -5;
+}
+.acesso-js .content2 .column1,
+.acesso-js .content2 .column2{
+    z-index: 50;
+}
+.acesso-js .content::before{
+    left:55rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    animation-name: anime-acess;
+    animation-duration: 550ms;
+}
+
+.cadastro-js .content2 .cadastro1,
+.cadastro-js .content2 .column2{
+    z-index: -5;
+}   
+.cadastro-js .content1 .cadastro1,
+.cadastro-js .content1 .column2{
+    z-index: 50;
+}
+
+@keyframes anime-acess{
+    0%{
+        left: 0rem;
+        width: 35rem;
+
+    }
+    
+    100%{
+        left: 55rem;
+        width: 35rem;
+    }
+}
+@keyframes anime-cadast{
+
 }
