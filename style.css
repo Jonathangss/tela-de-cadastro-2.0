@@ -27,7 +27,7 @@ body{
 }
 .content{
     position: relative;
-    background-color: #fff;
+    background:url(img/background3.jpg)65% 18%;
     border-radius: 2rem;
     width: 90rem;
     height: 50rem;
@@ -43,6 +43,9 @@ body{
     background-color: #3b6754;
     width: 35rem;
     height: 50rem;
+    background: url(img/background3.jpg)36.4% 18%;
+    animation-name: anime-cad;
+    animation-duration: 550ms;
 }
 .content1{
     display: flex;
@@ -99,7 +102,7 @@ body{
     justify-content:space-around;
     align-items: center;
     color: #245239;
-    background-color: transparent;
+    background-color:#c1d89c;
     box-shadow: 0.1rem 0.3rem  1rem #696969;
     border: 0.2rem solid #f5f5f5;
 }
@@ -201,19 +204,29 @@ input::placeholder{
     transition: 0.5s;
 }
 .button-cadastro{
-    margin:1rem;
+   /*  margin:1rem;
     color: #245239;
     background-color: transparent;
     box-shadow: 0.1rem 0.3rem  1rem #696969;
-    border: 0.2rem solid #f5f5f5;
+    border: 0.2rem solid #f5f5f5; */
+    color: #fff;
+    background-color: transparent;
+    box-shadow: 0.1rem 0.3rem  1rem #245239;
+    border: 0.2rem solid #326749;
+    
     
 }
 .button-cadastro:hover{
-    background-color: #245239;
+    /* background-color: #245239;
     color: #fff;
     box-shadow: 0rem 0.1rem  0.5rem #668879;
     border: 0.2rem solid #245239;
-    transition: 0.4s;
+    transition: 0.4s; */
+    background-color: #fff;
+    color: #245239;
+    box-shadow: 0rem 0.1rem  0.5rem #82a998;
+    border: 0.2rem solid #ffffff;
+    transition: 0.5s;
 }
 
 /*Content2*/
@@ -246,19 +259,28 @@ input::placeholder{
     border: none;  
 }
 .button-login{
-    margin:1rem;
+    color: #fff;
+    background-color: transparent;
+    box-shadow: 0.1rem 0.3rem  1rem #245239;
+    border: 0.2rem solid #326749;
+   /*  margin:1rem;
     color: #245239;
     background-color: transparent;
     box-shadow: 0.1rem 0.3rem  1rem #696969;
-    border: 0.2rem solid #f5f5f5;
+    border: 0.2rem solid #f5f5f5; */
     
 }
 .button-login:hover{
-    background-color: #245239;
+   /*  background-color: #245239;
     color: #fff;
     box-shadow: 0rem 0.1rem  0.5rem #668879;
     border: 0.2rem solid #245239;
-    transition: 0.4s;
+    transition: 0.4s; */
+    background-color: #fff;
+    color: #245239;
+    box-shadow: 0rem 0.1rem  0.5rem #82a998;
+    border: 0.2rem solid #ffffff;
+    transition: 0.5s;
 }
 .title-acess{
     color: #245239;
@@ -266,11 +288,13 @@ input::placeholder{
 /* Chamada do JS */
 .acesso-js .content1 .column1,
 .acesso-js .content1 .column2{
-    z-index: -5;
+    z-index: -1;
 }
-.acesso-js .content2 .column1,
+.acesso-js .content2 .column1{
+    z-index: 13;
+}
 .acesso-js .content2 .column2{
-    z-index: 50;
+    z-index: 11;
 }
 .acesso-js .content::before{
     left:55rem;
@@ -280,15 +304,23 @@ input::placeholder{
     border-bottom-right-radius: 1.5rem;
     animation-name: anime-acess;
     animation-duration: 550ms;
+    background: url(img/background3.jpg)80% 20%;
+    z-index: 12;
+}
+.cadastro-js .content::before{
+    z-index: 11;
 }
 
 .cadastro-js .content2 .cadastro1,
 .cadastro-js .content2 .column2{
-    z-index: -5;
+    z-index: -1;
 }   
-.cadastro-js .content1 .cadastro1,
 .cadastro-js .content1 .column2{
-    z-index: 50;
+    z-index: 11;
+}
+.cadastro-js .content1 .column1{
+    animation-duration: 4s;
+    z-index: 13;
 }
 
 @keyframes anime-acess{
@@ -303,6 +335,16 @@ input::placeholder{
         width: 35rem;
     }
 }
-@keyframes anime-cadast{
 
+@keyframes anime-cad{
+    0%{
+        left: 55rem;
+        width: 35rem;
+
+    }
+    
+    100%{
+        left: 0rem;
+        width: 35rem;
+    }
 }
